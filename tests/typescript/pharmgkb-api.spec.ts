@@ -2,7 +2,16 @@ import { test, expect, APIRequestContext } from '@playwright/test';
 
 const BASE_URL = 'https://api.pharmgkb.org';
 
-const validEvidenceLevels = ['1A', '1B', '2A', '2B', '3', '4', 'N/A'];
+enum EvidenceLevel {
+  LEVEL_1A = "1A",
+  LEVEL_1B = "1B",
+  LEVEL_2A = "2A",
+  LEVEL_2B = "2B",
+  LEVEL_3 = "3",
+  LEVEL_4 = "4",
+  NA = "N/A"
+}
+const validEvidenceLevels = Object.values(EvidenceLevel);
 
 test.describe.configure({ mode: 'parallel' });
 
