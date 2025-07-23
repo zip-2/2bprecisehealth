@@ -1,0 +1,11 @@
+{
+  "name": "pharmgkb-tests",
+  "version": "1.0.0",
+  "scripts": {
+    "test": "playwright test"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.43.1",
+    "typescript": "^5.4.0"
+  }
+}
